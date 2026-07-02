@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="description" content="Solar-Time: local apparent solar time, true noon, sunrise, sunset and moon phase.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <title>Solar-Time</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="hero card">
+      <div class="sunmark" aria-hidden="true">☀️</div>
+      <h1>Solar-Time</h1>
+      <p class="subtitle">Valódi helyi napidő, valódi dél és söridő-jelző.</p>
+      <button id="locateBtn">📍 Helymeghatározás indítása</button>
+      <p id="status" class="status">GPS engedély szükséges. A számítás helyben, a telefonon történik.</p>
+    </section>
+
+    <section class="dial card">
+      <div class="dialFace">
+        <div class="ring"></div>
+        <div id="shadow" class="shadow"></div>
+        <div class="pin"></div>
+        <div class="noon">N</div>
+        <div class="east">AM</div>
+        <div class="west">PM</div>
+      </div>
+      <div class="bigtime" id="solarTime">--:--:--</div>
+      <div class="label">helyi valódi napidő</div>
+    </section>
+
+    <section class="grid">
+      <div class="card metric"><span>Hivatalos idő</span><strong id="civilTime">--:--:--</strong></div>
+      <div class="card metric"><span>Eltérés</span><strong id="deltaTime">--</strong></div>
+      <div class="card metric"><span>Valódi helyi dél</span><strong id="solarNoon">--:--</strong></div>
+      <div class="card metric"><span>Söridő státusz</span><strong id="beerTime">--</strong></div>
+      <div class="card metric"><span>Napkelte</span><strong id="sunrise">--:--</strong></div>
+      <div class="card metric"><span>Napnyugta</span><strong id="sunset">--:--</strong></div>
+      <div class="card metric"><span>Napmagasság</span><strong id="altitude">--°</strong></div>
+      <div class="card metric"><span>Azimut</span><strong id="azimuth">--°</strong></div>
+      <div class="card metric"><span>Holdfázis</span><strong id="moonPhase">--</strong></div>
+      <div class="card metric"><span>Koordináták</span><strong id="coords">--</strong></div>
+    </section>
+
+    <section class="card note">
+      <h2>Használat</h2>
+      <p>iPhone: Safari → Megosztás → Főképernyőhöz adás. Android: Chrome/Brave → menü → Add to Home screen / Telepítés.</p>
+      <p class="small">A csillagászati képletek gyakorlati pontosságú NOAA-alapú közelítések. Navigációra vagy biztonságkritikus célra nem való.</p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
