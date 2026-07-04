@@ -1,1 +1,14 @@
-{"name":"Solar-Time","short_name":"Solar-Time","description":"Local apparent solar time, true noon, sunrise, sunset and moon phase.","start_url":"./","display":"standalone","background_color":"#07111f","theme_color":"#0f172a","orientation":"portrait","icons":[{"src":"icons/icon-192.png","sizes":"192x192","type":"image/png"},{"src":"icons/icon-512.png","sizes":"512x512","type":"image/png"},{"src":"icons/icon-192.svg","sizes":"192x192","type":"image/svg+xml"}]}
+{
+  "name": "Napóra v3.0",
+  "short_name": "Napóra",
+  "description": "True local solar time, sundial, Sun altitude, Moon phase and beer-angle.",
+  "start_url": "./index.html?v=3.0.0",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fff8ea",
+  "theme_color": "#7b4c20",
+  "icons": [
+    {"src":"icons/napora_icon_192.png","sizes":"192x192","type":"image/png"},
+    {"src":"icons/napora_icon_512.png","sizes":"512x512","type":"image/png"}
+  ]
+}
